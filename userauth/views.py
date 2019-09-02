@@ -4,13 +4,15 @@ import hashlib
 import json
 import requests
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,authentication_classes
 from rest_framework.response import Response
 from django_redis import get_redis_connection
 from .models import User
 from .serializers import UserSerializer
 
 @api_view(['POST'])
+@authentication_classes([])
+
 def code2Session(request):
     appid = ''
     secret = ''
