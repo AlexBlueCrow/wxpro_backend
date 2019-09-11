@@ -1,16 +1,16 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 import requests
 
 # Create your views here.
+appid= 'wx48c0b0d820c4563d'
+secret='4acdae8837a2d8e8a6a675193394eed1'
 def login(request):
-    print(request)
-    if request.code:
-        appid= 'wx48c0b0d820c4563d'
-        secret='4acdae8837a2d8e8a6a675193394eed1'
-        JSCODE=request.data.code
+    JSCODE = request.GET.get('code')
+    if code:
+        JSCODE=request
         wxLoginURL = 'https://api.weixin.qq.com/sns/jscode2session?' +'appid='+appid+'&secret='+secret+'&js_code='+JSCODE+'&grant_type='+authorization_code
-        r = requests.get( wxLoginURL ,request.data.code)
+        r = requests.get(wxLoginURL)
         print(r)
     
 
