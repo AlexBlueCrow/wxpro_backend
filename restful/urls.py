@@ -21,5 +21,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^',include('toys.urls')),
+    url('login/',include('login.urls')),
     url('',views.index)
+
 ]
