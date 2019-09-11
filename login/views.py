@@ -10,9 +10,8 @@ def login(request):
     if JSCODE:
         wxLoginURL = 'https://api.weixin.qq.com/sns/jscode2session?' +'appid='+appid+'&secret='+secret+'&js_code='+JSCODE+'&grant_type='+'authorization_code'
         r = requests.get(wxLoginURL)
-        print(r)
+        print('response:',r)
         return HttpResponse(r)
     else:
         return HttpResponseNotFound
-    
 
