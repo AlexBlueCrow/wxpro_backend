@@ -4,6 +4,7 @@ import requests
 
 # Create your views here.
 def login(request):
+    print(request)
     if request.code:
         appid= 'wx48c0b0d820c4563d'
         secret='4acdae8837a2d8e8a6a675193394eed1'
