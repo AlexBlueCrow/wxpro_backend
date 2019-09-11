@@ -8,7 +8,6 @@ secret='4acdae8837a2d8e8a6a675193394eed1'
 def login(request):
     JSCODE = request.GET.get('code')
     if JSCODE:
-        JSCODE=request
         wxLoginURL = 'https://api.weixin.qq.com/sns/jscode2session?' +'appid='+appid+'&secret='+secret+'&js_code='+JSCODE+'&grant_type='+authorization_code
         r = requests.get(wxLoginURL)
         print(r)
