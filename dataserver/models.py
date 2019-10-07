@@ -18,7 +18,7 @@ class Item(models.Model):
 class Active_Bill(models.Model):
     bill_num = models.IntegerField()##自动生成填入
     user_openid = models.ForeignKey(related_name=WxUser)
-    Item_num = models.ForeignKey(related_name=Item,on_delete,)##not finished
+    Item_num = models.ForeignKey(related_name=Item,)##not finished
     date_active = models.DateTimeField(auto_now_add=True)
     adress = models.CharField(max_length=200,blank = False)
 
