@@ -4,6 +4,7 @@ import requests
 
 # Create your views here.
 appid= 'wx48c0b0d820c4563d'
+appid= 'wxb3c126a3f39ffb03'
 secret='4acdae8837a2d8e8a6a675193394eed1'
 def login(request):
     JSCODE = request.GET.get('code')
