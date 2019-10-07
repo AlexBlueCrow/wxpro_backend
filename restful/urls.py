@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^',include('toys.urls')),
     url('login/',include('login.urls')),
     url('',views.index)
-
+    rul('dataserver/',include('dataserver.urls'))
 ]
