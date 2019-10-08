@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^',include('toys.urls')),
     url('login/',include('login.urls')),
-    url('',views.index)
-    rul('dataserver/',include('dataserver.urls'))
+    url('',views.index),
+    url('dataserver/',include('dataserver.urls'))
 ]
